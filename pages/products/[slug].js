@@ -5,12 +5,23 @@ import Product from "@/models/Product";
 import db from "@/utils/db";
 import { useStoreContext } from "@/utils/Store";
 import { toast } from "react-toastify";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 const ProductBySlug = props => {
     const { product } = props;
-    console.log("product", product);
 
     const { state, dispatch } = useStoreContext();
+
+    const router = useRouter();
+    const { order } = router.query;
+
+    useEffect(() => {
+        if (order === "success") {
+            toast.success("Ordered successfully");
+            router.push("/");
+        }
+    }, [router, order]);
 
     const addToCartHandler = async () => {
         const existedItem = state.cart.cartItems.find(
