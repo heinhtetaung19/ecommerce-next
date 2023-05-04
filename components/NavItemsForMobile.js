@@ -18,18 +18,16 @@ const NavItemsForMobile = ({ toggle, setToggle, cartItemCount }) => {
     };
 
     return (
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 md:hidden">
             <Link href="/cart">
                 <div>
                     Cart
                     {cartItemCount > 0 && (
-                        <span className="badge">
-                            {cartItemCount}
-                        </span>
+                        <span className="badge">{cartItemCount}</span>
                     )}
                 </div>
             </Link>
-            <div className="block text-xl md:hidden">
+            <div className="text-xl">
                 {toggle ? (
                     <motion.div
                         animate={{ x: [200, 0] }}
@@ -64,7 +62,9 @@ const NavItemsForMobile = ({ toggle, setToggle, cartItemCount }) => {
 
                             {!session?.user && (
                                 <Link href="/register">
-                                    <div className="nav-item mb-2">Register</div>
+                                    <div className="nav-item mb-2">
+                                        Register
+                                    </div>
                                 </Link>
                             )}
 
@@ -75,9 +75,7 @@ const NavItemsForMobile = ({ toggle, setToggle, cartItemCount }) => {
                             )}
 
                             {session?.user && (
-                                <Link
-                                    href="/login"
-                                    onClick={logoutHandler}>
+                                <Link href="/login" onClick={logoutHandler}>
                                     <div className="nav-item mb-2">Logout</div>
                                 </Link>
                             )}
