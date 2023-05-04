@@ -9,7 +9,7 @@ const DropdownMenu = () => {
     const { dispatch } = useStoreContext();
 
     const logoutHandler = () => {
-        dispatch({ type: "CLEAR_CART" });
+        dispatch({ type: "CLEAR_CART_ITEMS" });
         signOut({ callbackUrl: "/login" });
     };
 
