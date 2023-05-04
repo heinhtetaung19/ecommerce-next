@@ -60,8 +60,9 @@ const Layout = ({ title, children }) => {
                 <main className="container m-auto mt-16 px-4">{children}</main>
 
                 <footer className="mt-8 bg-gray-700 p-4 font-thin text-white shadow-inner">
-                    <h4 className="mb-4 text-center">
-                        Copyright &copy; 2022, owned by N31 Sports
+                    <h4 className="mb-4 text-center text-sm">
+                        <p>Copyright &copy; 2022, developed by Hein Htet Aung</p>
+                        <p>All rights reserved</p>
                     </h4>
                     <div className="mx-auto mb-4 grid w-[80%] gap-4 text-sm md:grid-cols-2 lg:grid-cols-4 lg:gap-0">
                         <div>
