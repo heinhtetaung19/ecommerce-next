@@ -37,10 +37,3 @@ next-env.d.ts
 # directories
 .idea
 
-# files
-.prettierrc
-next.config.cjs
-postcss.config.cjs
-prettier.config.js
-tailwind.config.js
-yarn.lock
