@@ -41,7 +41,7 @@ const Register = () => {
                     <label>Name</label>
                     <input
                         type="text"
-                        className="w-4/5"
+                        className="w-full"
                         id="name"
                         autoFocus
                         {...register("name", {
@@ -65,7 +65,7 @@ const Register = () => {
                     <label>Email</label>
                     <input
                         type="email"
-                        className="w-4/5"
+                        className="w-full"
                         id="email"
                         {...register("email", {
                             required: "Please enter email",
@@ -87,7 +87,7 @@ const Register = () => {
                     <label>Password</label>
                     <input
                         type="password"
-                        className="w-4/5"
+                        className="w-full"
                         id="password"
                         {...register("password", {
                             required: "Please enter passowrd",
@@ -110,7 +110,7 @@ const Register = () => {
                     <label>Confirm Password</label>
                     <input
                         type="password"
-                        className="w-4/5"
+                        className="w-full"
                         id="confirmPassword"
                         {...register("confirmPassword", {
                             required: "Please enter passowrd",
@@ -137,7 +137,7 @@ const Register = () => {
                 </div>
 
                 <div className="mb-4">
-                    <button className="primary-button w-4/5">Register</button>
+                    <button className="primary-button w-full">Register</button>
                 </div>
             </form>
         </Layout>

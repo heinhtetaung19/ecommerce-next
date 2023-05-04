@@ -55,7 +55,7 @@ const Login = () => {
                     <label>Email</label>
                     <input
                         type="email"
-                        className="w-4/5"
+                        className="w-full"
                         id="email"
                         autoFocus
                         {...register("email", {
@@ -78,7 +78,7 @@ const Login = () => {
                     <label>Password</label>
                     <input
                         type="password"
-                        className="w-4/5"
+                        className="w-full"
                         id="password"
                         {...register("password", {
                             required: "Please enter passowrd",
@@ -98,7 +98,7 @@ const Login = () => {
                 </div>
 
                 <div className="mb-4">
-                    <button className="primary-button w-4/5">Login</button>
+                    <button className="primary-button w-full">Login</button>
                 </div>
 
                 <div className="mb-4">

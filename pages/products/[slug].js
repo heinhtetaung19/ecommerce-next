@@ -5,24 +5,11 @@ import Product from "@/models/Product";
 import db from "@/utils/db";
 import { useStoreContext } from "@/utils/Store";
 import { toast } from "react-toastify";
-import { useRouter } from "next/router";
-import { useEffect } from "react";
-import { ToastContainer } from "react-toastify";
 
 const ProductBySlug = props => {
     const { product } = props;
 
     const { state, dispatch } = useStoreContext();
-
-    const router = useRouter();
-    const { order } = router.query;
-
-    useEffect(() => {
-        if (order === "success") {
-            toast.success("Ordered successfully");
-            router.push("/");
-        }
-    }, [router, order]);
 
     const addToCartHandler = async () => {
         const existedItem = state.cart.cartItems.find(
@@ -49,15 +36,8 @@ const ProductBySlug = props => {
     }
     return (
         <Layout title="Product">
-            <ToastContainer
-                position="bottom-center"
-                autoClose={1000}
-                limit={1}
-                theme="dark"
-            />
-
             <Link href="/">
-                <button className="secondary-button">
+                <button className="secondary-button mb-6">
                     Back to products page
                 </button>
             </Link>
