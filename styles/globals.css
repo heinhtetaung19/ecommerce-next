@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+	font-family: "Inter", sans-serif;
+}
+
+.nav-brand {
+	font-family: "Bruno Ace SC", cursive;
+}
+
+.product-name {
+	@apply font-bold text-red-700;
+}
+
+.card {
+	@apply block rounded-lg border border-gray-200 shadow-md;
+}
+
+.primary-button {
+	@apply rounded-md bg-teal-600 p-3 text-base text-white outline-none hover:bg-teal-700 active:bg-teal-900 md:text-sm;
+}
+
+.secondary-button {
+	@apply rounded border-2 border-gray-500 bg-transparent p-3 text-base text-black hover:bg-gray-200 active:bg-gray-400 md:text-sm;
+}
+
+.badge {
+	@apply ml-1 rounded-full bg-red-600 px-2 py-1 text-xs font-bold text-white;
+}
+
+.alert {
+	@apply mx-auto bg-red-500 p-4 text-center text-white;
+}
+
+input {
+	@apply mt-1 rounded border-2 p-2 outline-none ring-blue-300 focus:border-none focus:ring;
+}
+
+.error-status {
+	@apply flex items-center gap-2 text-red-500;
+}
+
+.nav-item {
+	@apply bg-transparent capitalize text-white hover:rounded-xl hover:border-teal-500 md:mr-2 md:text-black md:hover:border-2;
+}
+
+.dropdown-link {
+	@apply px-4 py-2  hover:bg-gray-300;
+}
